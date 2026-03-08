@@ -1,0 +1,29 @@
+{{> menu}}
+
+<section class="ui container">
+
+  <div class="ui segment">
+
+    <h2 class="ui header">{{title}}</h2>
+
+
+
+    {{#each destinations}}
+
+      <h3>{{name}}</h3>
+
+      
+
+      <p><b>Country:</b> {{country}}</p>
+      <p><b>Description:</b> {{description}}</p>
+      <p><b>Average Cost:</b> {{averageCost}}</p>
+      <p><b>Best Season:</b> {{bestSeason}}</p>
+      <img src="{{image}}" class="ui medium image">
+
+      <hr>
+
+    {{/each}}
+
+  </div>
+
+</section>

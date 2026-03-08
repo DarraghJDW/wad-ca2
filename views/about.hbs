@@ -1,0 +1,38 @@
+{{> menu}}
+
+<section class="ui center aligned middle aligned segment">
+
+  <div class="ui segment">
+
+    <h2 class="ui header">About This App</h2>
+
+    <p>
+      This web application was created to help tourists discover popular travel destinations
+      around the world. Users can explore different regions and learn about famous cities,
+      the best seasons to visit, and average travel costs.
+    </p>
+
+    <h3>Author</h3>
+
+        {{#each stats}}
+
+    <p>
+        Name: {{author}} <br>
+        Location: {{location}} <br>
+        Contact: {{email}}
+    </p>
+
+    <h3>App Statistics</h3>
+
+    <p>
+    Regions in App: {{regions}} <br>
+    Destinations in App: {{destinations}}
+    </p>
+
+    {{/each}}
+
+    <img src="/waterfordmap.jpg" class="ui centered medium image">
+
+  </div>
+
+</section>

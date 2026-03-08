@@ -1,9 +1,76 @@
 {
-  "info": {
-    "message": 
-      "The app-store.json and app-store.js files can be expanded to store some facts about the app e.g. the app's creators. You should also add your own store (equivalent to our playlist-store.json). See the assignment spec for more details.",
-    "creators": [
-      
-    ]
-  }
+  "destinationCollection": [
+    {
+      "id": "01",
+      "title": "Europe",
+      "destinations": [
+        {
+          "id": "01",
+          "name": "Paris",
+          "country": "France",
+          "description": "The capital of France, home of the eiffel tower, rich with fashion, art and culture",
+          "averageCost": "€1200",
+          "bestSeason": "Spring",
+          "image": "/paris.jpg"
+        },
+        {
+          "id": "02",
+          "name": "Rome",
+          "country": "Italy",
+          "description": "Historic city with ancient ruins like the Colosseum and Vatican City.",
+          "averageCost": "€1000",
+          "bestSeason": "Autumn",
+          "image": "/rome.jpg"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Asia",
+      "destinations": [
+        {
+          "id": "03",
+          "name": "Tokyo",
+          "country": "Japan",
+          "description": "A vibrant mix of futuristic technology and traditional culture.",
+          "averageCost": "$1500",
+          "bestSeason": "Spring",
+          "image": "/tokyo.jpg"
+        },
+        {
+          "id": "04",
+          "name": "Bangkok",
+          "country": "Thailand",
+          "description": "Known for temples, street food, and vibrant nightlife.",
+          "averageCost": "$900",
+          "bestSeason": "Winter",
+          "image": "/bangkok.jpg"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "North America",
+      "destinations": [
+        {
+          "id": "05",
+          "name": "New York",
+          "country": "USA",
+          "description": "The city that never sleeps with iconic landmarks like Times Square.",
+          "averageCost": "$2000",
+          "bestSeason": "Autumn",
+          "image": "/newyork.jpg"
+        },
+        {
+          "id": "06",
+          "name": "Vancouver",
+          "country": "Canada",
+          "description": "A beautiful coastal city surrounded by mountains.",
+          "averageCost": "$1800",
+          "bestSeason": "Summer",
+          "image": "/vancouver.jpg"
+        }
+      ]
+    }
+  ]
 }

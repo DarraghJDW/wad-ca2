@@ -10,5 +10,52 @@ html {
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  background-color: lightgrey;
+  background-color: rgb(33, 142, 156);
+}
+
+
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+
+.ui.menu {
+  background-color: #3498db;
+}
+
+.ui.menu .item {
+  color: white;
+}
+
+
+.ui.segment {
+  border-radius: 8px;
+  padding: 2em;
+}
+
+
+.ui.button {
+  margin-left: 10px;
+}
+
+
+img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+hr {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
+.ui.container {
+  max-width: 900px;
+}
+
+.ui.menu .header.item a {
+  color: white;
+  font-weight: bold;
 }

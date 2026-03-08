@@ -1,0 +1,32 @@
+{{> menu}}
+
+
+<section class="ui center aligned middle aligned segment">
+
+  <div class="ui segment">
+
+    <h2 class="ui header">Travel Regions</h2>
+
+
+        <button class="ui button" onclick="randomDestination()">
+         Choose For Me
+        </button>
+    <div class="ui list">
+
+      {{#each regions}}
+
+        <div class="item">
+          <b>{{title}}</b>
+
+          <a href="/collection/{{id}}" class="ui tiny blue button">
+            View Destinations
+          </a>
+        </div>
+
+      {{/each}}
+
+    </div>
+
+  </div>
+
+</section>

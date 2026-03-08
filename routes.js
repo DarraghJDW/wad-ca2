@@ -8,7 +8,26 @@ const router = express.Router();
 // add your own routes below
 
 import start from './controllers/start.js';
+import dashboard from './controllers/dashboard.js';
+import collection from './controllers/collection.js';
+import about from './controllers/about.js';
+
+// welcome page
 router.get('/', start.createView);
+
+// dashboard page
+router.get('/dashboard', dashboard.createView);
+
+// collection page
+router.get('/collection/:id', collection.createView);
+
+// about page
+router.get('/about', about.createView);
+
 
 
 export default router;
+
+
+
+

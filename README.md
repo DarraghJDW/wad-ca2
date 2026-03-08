@@ -1,10 +1,11 @@
-# Assignment 1 Starter Project
+# Assignment 
 
-Use this starter project as the basis for Assignment One
+This is a web app that helps you choose a destination to travel to, each country includes information such as:
+- Country
+- Average travel cost
+- Best season to visit
+- A short description
+- An image of the destination
 
-You should: 
-
-- Download this project from GitHub as a ZIP file
-- Complete the CA1 starter lab to set up your own GitHub repo for Assignment 1
-- Edit the files with your own content
-
+The travel destinations are stored in a JSON collection which contains regions and destinations.  
+The About page also loads statistics from a separate JSON file.
