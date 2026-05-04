@@ -24,7 +24,8 @@ router.get('/collection/:id', collection.createView);
 // about page
 router.get('/about', about.createView);
 
-
+router.post('/dashboard/addregion', dashboard.addRegion);
+router.post('/collection/:id/adddestination', collection.addDestination);
 
 export default router;
 

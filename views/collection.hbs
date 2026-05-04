@@ -26,4 +26,29 @@
 
   </div>
 
+  <div class="ui segment">
+  <form class="ui form" action="/collection/{{regionId}}/adddestination" method="POST">
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="name" placeholder="Name" required>
+      </div>
+      <div class="field">
+        <input type="text" name="country" placeholder="Country" required>
+      </div>
+    </div>
+    <div class="field">
+      <input type="text" name="description" placeholder="Description" required>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="averageCost" placeholder="Average Cost" required>
+      </div>
+      <div class="field">
+        <input type="text" name="bestSeason" placeholder="Best Season" required>
+      </div>
+    </div>
+    <button class="ui blue submit button">Add Destination</button>
+  </form>
+</div>
+
 </section>

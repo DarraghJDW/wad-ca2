@@ -2,6 +2,7 @@
 
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
+import { v4 as uuidv4 } from 'uuid';
 
 const collection = {
 
@@ -20,12 +21,27 @@ const collection = {
 
     const viewData = {
       title: region.title,
-      destinations: region.destinations
+      regionId: region.id,
+      destinations: region.destinations,
     };
 
 
     //render the page
     response.render("collection", viewData);
+  },
+
+    addDestination(request, response) {
+    const regionId = request.params.id;
+    const newDestination = {
+      id: uuidv4(),
+      name: request.body.name,
+      country: request.body.country,
+      description: request.body.description,
+      averageCost: request.body.averageCost,
+      bestSeason: request.body.bestSeason,
+    };
+    appStore.addDestination(regionId, newDestination);
+    response.redirect('/collection/' + regionId);
   },
 
 };

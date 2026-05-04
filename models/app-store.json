@@ -71,6 +71,20 @@
           "image": "/vancouver.jpg"
         }
       ]
+    },
+    {
+      "id": "ae5bbb69-931a-48f3-964e-d7cd27a2ac11",
+      "title": "South America",
+      "destinations": [
+        {
+          "id": "07bcb8ba-4202-47e0-8d37-82f39369d217",
+          "name": "Peru",
+          "country": "Peru",
+          "description": "snny",
+          "averageCost": "100",
+          "bestSeason": "summer"
+        }
+      ]
     }
   ]
 }

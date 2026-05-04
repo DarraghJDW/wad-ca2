@@ -19,7 +19,15 @@ const appStore = {
   getRegionById(id) {
     const regions = this.store.findAll(this.collection);
     return regions.find(region => region.id == id);
-  }
+  },
+
+  addRegion(region) {
+  this.store.addCollection(this.collection, region);
+  },
+
+  addDestination(regionId, destination) {
+    return this.store.addItem(this.collection, regionId, 'destinations', destination);
+  },
 
 };
 
