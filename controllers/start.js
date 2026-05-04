@@ -1,21 +1,23 @@
 "use strict";
 
 import logger from "../utils/logger.js";
-import appStore from "../models/app-store.js";
+import accounts from './accounts.js';
 
 const start = {
 
   createView(request, response) {
-
-    //logger sends a message to the terminal that the page is loading
     logger.info("Start page loading!");
+    const loggedInUser = accounts.getCurrentUser(request);
 
-    const viewData = {
-      title: "Best Tourist Destinations",
-      regions: appStore.getAllRegions()
-    };
-
-    response.render("start", viewData);
+    if (loggedInUser) {
+      const viewData = {
+        title: "Best Tourist Destinations",
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+      };
+      response.render("start", viewData);
+    } else {
+      response.redirect('/');
+    }
   },
 
 };

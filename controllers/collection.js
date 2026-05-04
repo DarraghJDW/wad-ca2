@@ -3,6 +3,7 @@
 import logger from "../utils/logger.js";
 import appStore from "../models/app-store.js";
 import { v4 as uuidv4 } from 'uuid';
+import accounts from './accounts.js';
 
 const collection = {
 
@@ -19,11 +20,13 @@ const collection = {
     //get the selected region from the json 
     const region = appStore.getRegionById(regionId);
 
-    const viewData = {
-      title: region.title,
-      regionId: region.id,
-      destinations: region.destinations,
-    };
+ const loggedInUser = accounts.getCurrentUser(request);
+  const viewData = {
+  title: region.title,
+  regionId: region.id,
+  destinations: region.destinations,
+  fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+};
 
 
     //render the page

@@ -44,7 +44,16 @@ const appStore = {
   searchRegions(search) {
   return this.store.findBy(this.collection,
     (region => region.title.toLowerCase().includes(search.toLowerCase())));
-}
+},
+
+getUserRegions(userid) {
+  return this.store.findBy(this.collection, (r => r.userid === userid));
+},
+
+searchUserRegions(search, userid) {
+  return this.store.findBy(this.collection,
+    (r => r.userid === userid && r.title.toLowerCase().includes(search.toLowerCase())));
+},
 
 
 };

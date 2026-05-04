@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "firstName": "Darragh",
+      "lastName": "Walsh",
+      "email": "darraghjdwalsh@gmail.com",
+      "password": "Dylan2013!",
+      "id": "b6893dcf-cfd1-4c65-ac2d-948e144ac681"
+    },
+    {
+      "firstName": "tungtung",
+      "lastName": "sahur",
+      "email": "tt@gmail.com",
+      "password": "p[lanes",
+      "id": "e4b254fb-863d-48ff-86d0-70db49fe9100"
+    }
+  ]
+}

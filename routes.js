@@ -13,8 +13,7 @@ import collection from './controllers/collection.js';
 import about from './controllers/about.js';
 
 // welcome page
-router.get('/', start.createView);
-
+router.get('/start', start.createView)
 // dashboard page
 router.get('/dashboard', dashboard.createView);
 
@@ -37,6 +36,15 @@ router.post('/collection/:id/updateDestination/:destinationid', collection.updat
 router.get('/searchCategory', dashboard.createView);
 router.get('/sortData', dashboard.createView);
 
+import accounts from './controllers/accounts.js';
+
+router.get('/', accounts.index);
+router.get('/login', accounts.login);
+router.get('/signup', accounts.signup);
+router.get('/logout', accounts.logout);
+router.post('/register', accounts.register);
+router.post('/authenticate', accounts.authenticate);
+router.get('/start', start.createView);
 
 export default router;
 

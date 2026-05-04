@@ -2,20 +2,24 @@
 
 import logger from "../utils/logger.js";
 import aboutStore from "../models/about-store.js";
+import accounts from './accounts.js';
 
 const about = {
 
   createView(request, response) {
-
-    //logger sends a message to the terminal that the page is loading
     logger.info("About page loading");
+    const loggedInUser = accounts.getCurrentUser(request);
 
-    const viewData = {
-      title: "About",
-      stats: aboutStore.getStats()
-    };
-
-    response.render("about", viewData);
+    if (loggedInUser) {
+      const viewData = {
+        title: "About",
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        stats: aboutStore.getStats()
+      };
+      response.render("about", viewData);
+    } else {
+      response.redirect('/');
+    }
   }
 
 };
