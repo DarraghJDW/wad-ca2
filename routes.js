@@ -34,6 +34,10 @@ router.get('/collection/:id/deletedestination/:destinationid', collection.delete
 
 router.post('/collection/:id/updateDestination/:destinationid', collection.updateDestination);
 
+router.get('/searchCategory', dashboard.createView);
+router.get('/sortData', dashboard.createView);
+
+
 export default router;
 
 

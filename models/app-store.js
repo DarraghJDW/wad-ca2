@@ -41,6 +41,10 @@ const appStore = {
   editDestination(id, destinationId, updatedDestination) {
     this.store.editItem(this.collection, id, destinationId, "destinations", updatedDestination);
 },
+  searchRegions(search) {
+  return this.store.findBy(this.collection,
+    (region => region.title.toLowerCase().includes(search.toLowerCase())));
+}
 
 
 };

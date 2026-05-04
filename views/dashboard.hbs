@@ -1,46 +1,12 @@
 {{> menu}}
 
+{{> listregions}}
 
-<section class="ui center aligned middle aligned segment">
-
-  <div class="ui segment">
-
-    <h2 class="ui header">Travel Regions</h2>
-
-
-        <button class="ui button" onclick="randomDestination()">
-         Choose For Me
-        </button>
-    <div class="ui list">
-
-      {{#each regions}}
-
-        <div class="item">
-          <b>{{title}}</b>
-
-          <a href="/collection/{{id}}" class="ui tiny blue button">
-            View Destinations
-          </a>
-        </div>
-
-            <a href="/dashboard/deleteregion/{{id}}">
-      <i class="ui red trash icon"></i>
-    </a>
-
-      {{/each}}
-
+<div class="ui segment">
+  <form class="ui form" action="/dashboard/addregion" method="POST">
+    <div class="field">
+      <input type="text" name="title" placeholder="Region Name" required>
     </div>
-
-        <div class="ui segment">
-      <form class="ui form" action="/dashboard/addregion" method="POST">
-        <div class="field">
-          <label>Region Name</label>
-          <input type="text" name="title" placeholder="Region Name" required>
-        </div>
-        <button class="ui blue submit button">Add Region</button>
-      </form>
-    </div>
-
-  </div>
-
-</section>
+    <button class="ui blue submit button">Add Region</button>
+  </form>
+</div>

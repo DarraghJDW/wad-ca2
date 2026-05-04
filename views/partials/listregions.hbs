@@ -1,0 +1,46 @@
+<section class="ui left aligned middle aligned segment">
+
+  <h2>Travel Dashboard</h2>
+
+ <form action="/searchCategory" method="GET" class="ui form">
+    <div class="field">
+      <input type="text" name="searchTerm" placeholder="Search by title..." value="{{search}}">
+    </div>
+    <div class="field">
+      <label>Sort by:</label>
+      <select class="ui dropdown" name="sort" onchange="this.form.submit()">
+        <option value="title" {{#if titleSelected}}selected{{/if}}>Title</option>
+        <option value="destinations" {{#if destinationsSelected}}selected{{/if}}>Number of Destinations</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Order:</label>
+      <select class="ui dropdown" name="order" onchange="this.form.submit()">
+        <option value="asc" {{#if ascSelected}}selected{{/if}}>↑</option>
+        <option value="desc" {{#if descSelected}}selected{{/if}}>↓</option>
+      </select>
+    </div>
+</form>
+
+  {{#unless search}}
+    {{#unless regions}}
+      <h3 class="ui message">
+        Start adding your regions!
+      </h3>
+    {{/unless}}
+  {{/unless}}
+
+  {{#each regions}}
+    <section class="ui left aligned middle aligned segment">
+      <h3 class="ui header">{{title}}</h3>
+      <a href="/collection/{{id}}">
+        <i class="ui open folder outline black icon"></i>
+      </a>
+      <a href="/dashboard/deleteregion/{{id}}">
+        <i class="ui black trash icon"></i>
+      </a>
+      <p>{{destinations.length}} destinations</p>
+    </section>
+  {{/each}}
+
+</section>
