@@ -1,0 +1,24 @@
+<tr id="destination{{@index}}">
+  <td>{{name}}</td>
+  <td>{{country}}</td>
+  <td>{{description}}</td>
+  <td>{{averageCost}}</td>
+  <td>{{bestSeason}}</td>
+  <td>
+  {{#if image}}
+    <img src="{{image}}" class="ui large image">
+  {{else}}
+    <img src="/travelmap.jpg" class="ui large image">
+  {{/if}}
+</td>
+  <td class="center aligned">
+    <button title="Edit destination" class="editSubmit" id="showEdit{{@index}}">
+      <i class="ui pencil icon"></i>
+    </button>
+  </td>
+  <td class="center aligned">
+    <a href="/collection/{{regionId}}/deletedestination/{{id}}">
+      <i class="ui black trash icon"></i>
+    </a>
+  </td>
+</tr>

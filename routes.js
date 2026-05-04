@@ -27,6 +27,13 @@ router.get('/about', about.createView);
 router.post('/dashboard/addregion', dashboard.addRegion);
 router.post('/collection/:id/adddestination', collection.addDestination);
 
+
+router.get('/dashboard/deleteregion/:id', dashboard.deleteRegion);
+router.get('/collection/:id/deletedestination/:destinationid', collection.deleteDestination);
+
+
+router.post('/collection/:id/updateDestination/:destinationid', collection.updateDestination);
+
 export default router;
 
 

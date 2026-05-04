@@ -10,8 +10,7 @@
           "country": "France",
           "description": "The capital of France, home of the eiffel tower, rich with fashion, art and culture",
           "averageCost": "€1200",
-          "bestSeason": "Spring",
-          "image": "/paris.jpg"
+          "bestSeason": "Spring"
         },
         {
           "id": "02",
@@ -73,16 +72,16 @@
       ]
     },
     {
-      "id": "ae5bbb69-931a-48f3-964e-d7cd27a2ac11",
-      "title": "South America",
+      "id": "28e8ea9d-55c9-41e8-93db-48c3cc9f7a90",
+      "title": "dc",
       "destinations": [
         {
-          "id": "07bcb8ba-4202-47e0-8d37-82f39369d217",
-          "name": "Peru",
-          "country": "Peru",
-          "description": "snny",
-          "averageCost": "100",
-          "bestSeason": "summer"
+          "id": "75afd855-6b60-41b6-b68c-78c777f0a370",
+          "name": "Dar",
+          "country": "ghjd",
+          "description": "HELLOO",
+          "averageCost": "dasdasdaa",
+          "bestSeason": "FGFD"
         }
       ]
     }

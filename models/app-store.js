@@ -5,7 +5,7 @@ import JsonStore from './json-store.js';
 
 const appStore = {
 
-  store: new JsonStore('./models/app-store.json', { destinationCollection: {} }),
+  store: new JsonStore('./models/app-store.json', { destinationCollection: [] }),
   collection: "destinationCollection",
 
 
@@ -28,6 +28,20 @@ const appStore = {
   addDestination(regionId, destination) {
     return this.store.addItem(this.collection, regionId, 'destinations', destination);
   },
+
+    removeRegion(id) {
+    const region = this.getRegionById(id);
+    return this.store.removeCollection(this.collection, region);
+  },
+
+  removeDestination(regionId, destinationId) {
+    return this.store.removeItem(this.collection, regionId, 'destinations', destinationId);
+  },
+
+  editDestination(id, destinationId, updatedDestination) {
+    this.store.editItem(this.collection, id, destinationId, "destinations", updatedDestination);
+},
+
 
 };
 

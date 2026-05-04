@@ -8,21 +8,41 @@
 
 
 
-    {{#each destinations}}
-
-      <h3>{{name}}</h3>
-
-      
-
-      <p><b>Country:</b> {{country}}</p>
-      <p><b>Description:</b> {{description}}</p>
-      <p><b>Average Cost:</b> {{averageCost}}</p>
-      <p><b>Best Season:</b> {{bestSeason}}</p>
-      <img src="{{image}}" class="ui medium image">
-
-      <hr>
-
-    {{/each}}
+    {{#if destinations}}
+  <table class="ui unstackable striped table">
+    <thead>
+      <tr>
+        <th class="four wide">Name</th>
+        <th class="four wide">Country</th>
+        <th class="two wide">Description</th>
+        <th class="two wide">Average Cost</th>
+        <th class="two wide">Best Season</th>
+        <th class="two wide"> </th>
+        <th class="two wide"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each destinations}}
+  {{> listOneDestination regionId=../regionId}}
+  {{> editDestination regionId=../regionId}}
+  <script>
+    document.querySelector("#showEdit{{@index}}").addEventListener('click', () => {
+      document.querySelector("#destination{{@index}}").style.display = "none";
+      document.querySelector("#edit{{@index}}").style.display = "table-row";
+    })
+    document.querySelector("#hideEdit{{@index}}").addEventListener('click', () => {
+      document.querySelector("#destination{{@index}}").style.display = "table-row";
+      document.querySelector("#edit{{@index}}").style.display = "none";
+    })
+  </script>
+{{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <h3 class="ui message">
+    No destinations yet!
+  </h3>
+{{/if}}
 
   </div>
 

@@ -1,0 +1,19 @@
+<form class="ui stacked segment form" method="POST" action="/collection/{{regionId}}/updatedestination/{{id}}">
+  <tr class="hide" id="edit{{@index}}">
+    <td><span class="ui input"><input type="text" name="name" value="{{name}}" required></span></td>
+    <td><span class="ui input"><input type="text" name="country" value="{{country}}" required></span></td>
+    <td><span class="ui input"><input type="text" name="description" value="{{description}}" required></span></td>
+    <td><span class="ui input"><input type="text" name="averageCost" value="{{averageCost}}" required></span></td>
+    <td><span class="ui input"><input type="text" name="bestSeason" value="{{bestSeason}}" required></span></td>
+    <td class="center aligned">
+      <button type="reset" class="editSubmit" id="hideEdit{{@index}}">
+        <i class="ui undo icon"></i>
+      </button>
+    </td>
+    <td class="center aligned">
+      <button type="submit" class="editSubmit">
+        <i class="ui save icon"></i>
+      </button>
+    </td>
+  </tr>
+</form>

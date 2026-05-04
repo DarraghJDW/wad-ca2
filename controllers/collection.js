@@ -44,6 +44,32 @@ const collection = {
     response.redirect('/collection/' + regionId);
   },
 
+    deleteDestination(request, response) {
+    const regionId = request.params.id;
+    const destinationId = request.params.destinationid;
+    logger.debug(`Deleting Destination  $(destinationId} from Playlist ${destinationId}`);
+    appStore.removeDestination(regionId, destinationId);
+    response.redirect('/collection/' + regionId);
+  },
+
+  updateDestination(request, response) {
+    const regionId = request.params.id;
+    const destinationId = request.params.destinationid;
+    logger.debug("regionId: " + regionId + " destinationId: " + destinationId);
+    logger.debug("updating destination " + destinationId);
+    const updatedDestination = {
+      id: destinationId,
+      name: request.body.name,
+      country: request.body.country,
+      description: request.body.description,
+      averageCost: request.body.averageCost,
+      bestSeason: request.body.bestSeason,
+  };
+    appStore.editDestination(regionId, destinationId, updatedDestination);
+    response.redirect('/collection/' + regionId);
+}
+
+
 };
 
 export default collection;

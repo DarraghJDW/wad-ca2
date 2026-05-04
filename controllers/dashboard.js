@@ -31,6 +31,14 @@ const dashboard = {
   response.redirect('/dashboard');
 },
 
+  deleteRegion(request, response) {
+  const regionId = request.params.id;
+  appStore.removeRegion(regionId);
+  response.redirect('/dashboard');
+},
+
+
+
 };
 
 export default dashboard;

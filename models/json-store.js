@@ -78,7 +78,7 @@ class JsonStore {
     data[0][arr].splice(index, 1, obj);
     await this.db.write();
   }
-
+  
   async addToCloudinary(file) {
     const result = await cloudinary.uploader.upload(file.tempFilePath);
     logger.info("Cloudinary result: " + result.url);
