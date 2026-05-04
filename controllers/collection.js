@@ -33,19 +33,20 @@ const collection = {
     response.render("collection", viewData);
   },
 
-    addDestination(request, response) {
-    const regionId = request.params.id;
-    const newDestination = {
-      id: uuidv4(),
-      name: request.body.name,
-      country: request.body.country,
-      description: request.body.description,
-      averageCost: request.body.averageCost,
-      bestSeason: request.body.bestSeason,
-    };
-    appStore.addDestination(regionId, newDestination);
+addDestination(request, response) {
+  const regionId = request.params.id;
+  const newDestination = {
+    id: uuidv4(),
+    name: request.body.name,
+    country: request.body.country,
+    description: request.body.description,
+    averageCost: request.body.averageCost,
+    bestSeason: request.body.bestSeason,
+  };
+  appStore.addDestination(regionId, newDestination, request.files.picture, function() {
     response.redirect('/collection/' + regionId);
-  },
+  });
+},
 
     deleteDestination(request, response) {
     const regionId = request.params.id;

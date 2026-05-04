@@ -46,8 +46,8 @@
 
   </div>
 
-  <div class="ui segment">
-  <form class="ui form" action="/collection/{{regionId}}/adddestination" method="POST">
+<div class="ui segment">
+  <form class="ui form" action="/collection/{{regionId}}/adddestination" method="POST" enctype="multipart/form-data">
     <div class="two fields">
       <div class="field">
         <input type="text" name="name" placeholder="Name" required>
@@ -67,8 +67,10 @@
         <input type="text" name="bestSeason" placeholder="Best Season" required>
       </div>
     </div>
+    <div class="field">
+      <input type="file" name="picture" required>
+    </div>
     <button class="ui blue submit button">Add Destination</button>
-  </form>
-</div>
+  </form
 
 </section>

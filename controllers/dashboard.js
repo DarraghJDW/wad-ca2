@@ -60,8 +60,9 @@ addRegion(request, response) {
     title: request.body.title,
     destinations: [],
   };
-  appStore.addRegion(newRegion);
-  response.redirect('/dashboard');
+  appStore.addRegion(newRegion, request.files.picture, function() {
+    response.redirect('/dashboard');
+  });
 },
 
   deleteRegion(request, response) {

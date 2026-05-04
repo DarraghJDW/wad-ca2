@@ -30,8 +30,11 @@
     {{/unless}}
   {{/unless}}
 
-  {{#each regions}}
+{{#each regions}}
     <section class="ui left aligned middle aligned segment">
+      {{#if picture}}
+        <img src="{{picture.url}}" class="ui small image">
+      {{/if}}
       <h3 class="ui header">{{title}}</h3>
       <a href="/collection/{{id}}">
         <i class="ui open folder outline black icon"></i>
@@ -42,5 +45,6 @@
       <p>{{destinations.length}} destinations</p>
     </section>
   {{/each}}
+
 
 </section>

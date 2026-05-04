@@ -3,9 +3,14 @@
 {{> listregions}}
 
 <div class="ui segment">
-  <form class="ui form" action="/dashboard/addregion" method="POST">
-    <div class="field">
-      <input type="text" name="title" placeholder="Region Name" required>
+  <form class="ui form" action="/dashboard/addregion" method="POST" enctype="multipart/form-data">
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="title" placeholder="Region Name" required>
+      </div>
+      <div class="field">
+        <input type="file" name="picture" required>
+      </div>
     </div>
     <button class="ui blue submit button">Add Region</button>
   </form>

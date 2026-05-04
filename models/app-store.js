@@ -21,13 +21,27 @@ const appStore = {
     return regions.find(region => region.id == id);
   },
 
-  addRegion(region) {
-  this.store.addCollection(this.collection, region);
-  },
+async addRegion(region, file, response) {
+  try {
+    region.picture = await this.store.addToCloudinary(file);
+    this.store.addCollection(this.collection, region);
+    response();
+  } catch (error) {
+    logger.error("Error adding region:", error);
+    response(error);
+  }
+},
 
-  addDestination(regionId, destination) {
-    return this.store.addItem(this.collection, regionId, 'destinations', destination);
-  },
+async addDestination(regionId, destination, file, response) {
+  try {
+    destination.picture = await this.store.addToCloudinary(file);
+    this.store.addItem(this.collection, regionId, 'destinations', destination);
+    response();
+  } catch (error) {
+    logger.error("Error adding destination:", error);
+    response(error);
+  }
+},
 
     removeRegion(id) {
     const region = this.getRegionById(id);
