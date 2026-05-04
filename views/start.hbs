@@ -1,13 +1,25 @@
-{{> menu}}
+{{> menu id="start"}}
 
 <section class="ui center aligned middle aligned segment">
 
-  <h1>Tourist Destination</h1>
+  <h1>Tourist Destination Explorer</h1>
 
   <p>
-    Welcome to the Tourist Destination Explorer. This web app can help you make a desision on where to visit around the world!
+    Welcome to the Tourist Destination Explorer. This web app can help you make a decision on where to visit around the world!
   </p>
 
   <img src="/travelmap.jpg" class="ui centered large image">
+
+  <div class="ui segment">
+    <h3>Your Statistics</h3>
+    <p>Your Regions: {{userRegions}}</p>
+    <p>Your Destinations: {{userDestinations}}</p>
+
+    <h3>App Statistics</h3>
+    <p>Total Users: {{totalUsers}}</p>
+    <p>Total Regions: {{totalRegions}}</p>
+    <p>Total Destinations: {{totalDestinations}}</p>
+    <p>Region with most destinations: {{largestRegion}}</p>
+  </div>
 
 </section>

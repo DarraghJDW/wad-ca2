@@ -84,6 +84,29 @@
           "bestSeason": "FGFD"
         }
       ]
+    },
+    {
+      "id": "044c3488-714f-498b-a0d9-1e6c91b4c513",
+      "userid": "e4b254fb-863d-48ff-86d0-70db49fe9100",
+      "title": "asd",
+      "destinations": [
+        {
+          "id": "e3f43c8d-7321-47df-9bc8-293813820116",
+          "name": "ads",
+          "country": "asd",
+          "description": "adsDASD",
+          "averageCost": "132123",
+          "bestSeason": "ADS"
+        },
+        {
+          "id": "ee3d23a4-1a46-49f7-baee-0b7791018abb",
+          "name": "dsa",
+          "country": "daseq2we",
+          "description": "dqasdad",
+          "averageCost": "31312",
+          "bestSeason": "edwqsad"
+        }
+      ]
     }
   ]
 }
